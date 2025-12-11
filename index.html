@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>Sketch</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css" />
+
+        <script src="libraries/p5.min.js"></script>
+        <script src="libraries/p5.sound.min.js"></script>
+    </head>
+
+    <body>
+        <div class="app">
+            <div id="canvas-container"></div>
+            <div class="toolbar">
+                <div class="field">
+                    <label>Siły: </label>
+                    <!-- here -->
+                    <div class="row">
+                        <label>Ten sam kierunek</label>
+                        <input type="radio" name="direction" value="equal" checked />
+                    </div>
+                    <div class="row">
+                        <label>Różne kierunki</label>
+                        <input type="radio" name="direction" value="notEqual" />
+                    </div>
+                </div>
+                <div class="field">
+                    <label>Rysuj wektor siły: </label>
+                    <div class="row">
+                        <label>Siła 1</label
+                        ><input type="radio" name="force" value="force1" checked />
+                    </div>
+                    <div class="row">
+                        <label>Siła 2</label><input type="radio" name="force" value="force2" />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label>Pokaż: </label>
+                    <div class="row">
+                        <input type="checkbox" id="showMovedForce" /><label for="showMovedForce"
+                            >Siłę przeniesioną</label
+                        >
+                    </div>
+                    <div class="row">
+                        <input type="checkbox" id="showResultantForce" /><label
+                            for="showResultantForce"
+                            >Siłę wypadkową</label
+                        >
+                    </div>
+                    <div class="row">
+                        <input type="checkbox" id="showValues" /><label for="showValues"
+                            >Wartości</label
+                        >
+                    </div>
+                </div>
+                <!-- <div id="applyBtn">
+                    <button>Wyznacz</button>
+                </div> -->
+            </div>
+        </div>
+        <script src="sketch.js"></script>
+    </body>
+</html>

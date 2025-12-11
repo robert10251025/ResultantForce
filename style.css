@@ -1,0 +1,64 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  /* height: 100vh; */
+  height: 800px;
+}
+
+#canvas-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  width: 260px;
+  padding: 16px;
+  background: #000;
+  border-left: 1px solid #bbb;
+  box-sizing: border-box;
+  color: #bbb;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  row-gap: 10px;
+  margin: 10px;
+  padding: 15px;
+  border: 2px solid #bbb;
+}
+
+.toolbar input {
+  margin: 4px 4px 0 0;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  column-gap:  10px;
+}
+
+/* #applyBtn {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+#applyBtn button {
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+} */
