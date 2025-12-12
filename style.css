@@ -1,12 +1,13 @@
 html, body {
   margin: 0;
   padding: 0;
+  background-color: #000;
 }
 
 .app {
   display: flex;
-  /* height: 100vh; */
-  height: 800px;
+  height: 100vh;
+  /* height: 800px; */
 }
 
 #canvas-container {
@@ -38,6 +39,10 @@ html, body {
   border: 2px solid #bbb;
 }
 
+.field:last-child {
+  margin-top: auto;
+}
+
 .toolbar input {
   margin: 4px 4px 0 0;
   padding: 6px 10px;
@@ -48,6 +53,12 @@ html, body {
   display: flex;
   flex-direction: row;
   column-gap:  10px;
+}
+
+.tip {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
 }
 
 /* #applyBtn {
