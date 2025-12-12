@@ -14,6 +14,7 @@ let resultantForceAngle = 0;
 let resultantForceValue = 0;
 
 // ------------- HTML ELEMENTS ---------------------
+const componentForces = document.querySelector('#showForces');
 const movedCheckbox = document.querySelector('#showMovedForce');
 const resultantCheckbox = document.querySelector('#showResultantForce');
 const values = document.querySelector('#showValues');
@@ -314,30 +315,31 @@ function draw() {
     circle(width / 2, height / 2, 100);
 
     const selectedDir = getDirectionForce();
+    if (componentForces.checked) {
+        drawVector(
+            width / 2,
+            selectedDir === 'equal' ? height / 2 - 20 : height / 2,
+            endPointXVector1,
+            selectedDir === 'equal' ? height / 2 - 20 : endPointYVector1,
+            'red',
+            false,
+            'F1',
+            true,
+            force1Angle
+        );
 
-    drawVector(
-        width / 2,
-        selectedDir === 'equal' ? height / 2 - 20 : height / 2,
-        endPointXVector1,
-        selectedDir === 'equal' ? height / 2 - 20 : endPointYVector1,
-        'red',
-        false,
-        'F1',
-        true,
-        force1Angle
-    );
-
-    drawVector(
-        width / 2,
-        selectedDir === 'equal' ? height / 2 + 20 : height / 2,
-        endPointXVector2,
-        selectedDir === 'equal' ? height / 2 + 20 : endPointYVector2,
-        'green',
-        false,
-        'F2',
-        false,
-        force2Angle
-    );
+        drawVector(
+            width / 2,
+            selectedDir === 'equal' ? height / 2 + 20 : height / 2,
+            endPointXVector2,
+            selectedDir === 'equal' ? height / 2 + 20 : endPointYVector2,
+            'green',
+            false,
+            'F2',
+            false,
+            force2Angle
+        );
+    }
 
     drawMovedForces(selectedDir);
 
